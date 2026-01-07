@@ -7,6 +7,21 @@
  * @flow
  */
 
+// 测试代码：验证源码修改是否生效
+// eslint-disable-next-line no-console
+if (typeof console !== 'undefined') {
+  // eslint-disable-next-line no-console
+  console.log('🚀 React 源码已加载！这是从源码构建的版本');
+}
+if (typeof alert !== 'undefined') {
+  // alert 只在浏览器环境可用，Node 环境会报错，所以用 try-catch
+  try {
+    // alert('React 源码调试测试');
+  } catch (e) {
+    // 忽略 Node 环境的错误
+  }
+}
+
 import ReactVersion from 'shared/ReactVersion';
 import {
   REACT_FRAGMENT_TYPE,
